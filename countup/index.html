@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+      <style>
+          #countdown {
+              font-family: "Roboto", sans-serif;
+              font-size: 4rem;
+              font-weight: bold;
+              color: #FFFFFF;
+              margin: auto;
+              width: 300px;
+              text-align: center;
+          }
+      </style>
+    </head>
+    <body>
+        <div id="countdown"></div>
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script>
+            var startTimestamp = moment().startOf("day");
+            setInterval(function() {
+                startTimestamp.add(1, 'second');
+                document.getElementById('countdown').innerHTML = 
+                    startTimestamp.format('HH:mm:ss');
+            }, 1000);
+        </script>
+    </body>
+</html>
