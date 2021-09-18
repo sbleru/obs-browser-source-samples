@@ -7,9 +7,9 @@
               font-family: "Roboto", sans-serif;
               font-size: 4rem;
               font-weight: bold;
-              color: #FFFFFF;
-              margin: auto;
-              width: 300px;
+              color: #fff;
+              background-color: #000;
+              width: 30%;
               text-align: center;
           }
       </style>
@@ -20,10 +20,10 @@
         <script>
             var startTimestamp = moment().startOf("day");
             setInterval(function() {
-                startTimestamp.add(1, 'second');
+                startTimestamp.add(10, 'milliseconds');
                 document.getElementById('countdown').innerHTML = 
-                    startTimestamp.format('HH:mm:ss');
-            }, 1000);
+                    startTimestamp.format('HH:mm:ss.SS');
+            }, 10);
         </script>
     </body>
 </html>
